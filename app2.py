@@ -12,7 +12,8 @@ if hist_button:
     fig = px.histogram(car_data, x="odometer")
     st.plotly_chart(fig, use_container_width=True)
 
-if st.button('Criar gráfico de dispersão'):
+scatter_button = st.button('Criar gráfico de dispersão')
+if scatter_button:
     st.write('Criando gráfico de dispersão: Quilometragem vs Preço')
     fig = px.scatter(car_data, x='odometer', y='price')
     st.plotly_chart(fig, use_container_width=True)
